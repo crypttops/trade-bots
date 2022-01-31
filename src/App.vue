@@ -168,11 +168,11 @@
     </div>
     <Drawer :closable="true" width="40" v-model="navDrawerModal" class="header_nav_mobile">
         <Menu :active-name="activeNav" width="auto" @on-select="changelanguage">
-           <MenuItem name="nav-index" style="text-align:left;">{{$t("header.index")}}</MenuItem>
+           <!-- <MenuItem name="nav-index" style="text-align:left;">{{$t("header.index")}}</MenuItem> -->
            <MenuItem name="nav-exchange" style="text-align:left;">{{$t("header.exchange")}}</MenuItem>
-            <MenuItem name="nav-ctc" style="text-align:left;">{{$t("header.ctc")}}</MenuItem>
+            <!-- <MenuItem name="nav-ctc" style="text-align:left;">{{$t("header.ctc")}}</MenuItem> -->
 <!--            <router-link to="/otc/trade/usdt">-->
-             <MenuItem name="nav-otc" style="text-align:left;">{{$t("header.otc")}}</MenuItem>
+             <!-- <MenuItem name="nav-otc" style="text-align:left;">{{$t("header.otc")}}</MenuItem> -->
 <!--            </router-link>-->
             <!-- <router-link to="/lab">
               <MenuItem name="nav-lab" style="text-align:left;color:#bdc2ca;">{{$t("header.lab")}}</MenuItem>
@@ -196,7 +196,6 @@
 <!--              </router-link>-->
 <!--            </Submenu>-->
             <Submenu name="nav_personal" v-if="isLogin">
-              
                 <template slot="title" class="lang-title">
                   <span style="color:#bdc2ca;">{{$t("header.usercenter")}}</span>
                 </template>
