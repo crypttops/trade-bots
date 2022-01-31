@@ -27,7 +27,7 @@ module.exports = {
     header: {
         index: 'Home',
         otc: 'OTC',
-        exchange: 'Exchange',
+        exchange: 'Terminal',
         xiaoxi: 'Message',
         kefu: 'Help',
         login: 'LOGIN',
@@ -53,7 +53,7 @@ module.exports = {
         whitepaper: "White Paper",
         scandownload: "Download App",
         innovationmanage: "Innovation",
-        swap1: "Swap(PRO)",
+        swap1: "Smart",
         swap2: "Swap(Ex)",
         swap3: "CFD",
         swap4: "Second",

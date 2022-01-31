@@ -18,15 +18,15 @@
             <div class="header_nav">
               <Menu :active-name="activeNav" width="auto" :open-names="['1']">
                 <Submenu name="1">
-                  <router-link to="/">
+                  <!-- <router-link to="/">
                     <MenuItem name="nav-index">{{$t("header.index")}}</MenuItem>
-                  </router-link>
-                  <router-link to="/ctc">
+                  </router-link> -->
+                  <!-- <router-link to="/ctc">
                     <MenuItem name="nav-ctc">{{$t("header.ctc")}}</MenuItem>
-                  </router-link>
-                  <router-link to="/otc/trade/usdt">
+                  </router-link> -->
+                  <!-- <router-link to="/otc/trade/usdt">
                     <MenuItem name="nav-otc">{{$t("header.otc")}}</MenuItem>
-                  </router-link>
+                  </router-link> -->
                   <router-link to="/exchange">
                     <MenuItem name="nav-exchange">{{$t("header.exchange")}}</MenuItem>
                   </router-link>
@@ -147,7 +147,7 @@
                 </Dropdown>
               </div>
               <!-- 未登录 -->
-              <div class="login_register" v-else>
+              <!-- <div class="login_register" v-else>
                 <Menu active-name11="1-1" width="auto" :open-names="['2']">
                   <Submenu name="2" id="login_register_theme">
                     <router-link to="/login" id="login">
@@ -158,7 +158,7 @@
                     </router-link>
                   </Submenu>
                 </Menu>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
