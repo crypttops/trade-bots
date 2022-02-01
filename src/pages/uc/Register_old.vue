@@ -73,7 +73,7 @@
       <Alert v-else type="warning">
         Coming soon!
         <template slot="desc">
-          exchange.crypttops.com will open register soon
+          app.crypttops.com will open register soon
         </template>
       </Alert>
     </div>

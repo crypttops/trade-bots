@@ -107,11 +107,11 @@
         </div>
         <div class="content1">
           <h5>{{$t('cms.contactus')}}</h5>
-          <p>{{$t('description.service')}}：service@exchange.crypttops.com</p>
-          <p>{{$t('description.support')}}：support@exchange.crypttops.com</p>
-          <p>{{$t('description.apply')}}：apply@exchange.crypttops.com</p>
-          <p>{{$t('description.report')}}：ceo@exchange.crypttops.com</p>
-          <p>{{$t('description.coop')}}：coop@exchange.crypttops.com</p>
+          <p>{{$t('description.service')}}：service@app.crypttops.com</p>
+          <p>{{$t('description.support')}}：support@app.crypttops.com</p>
+          <p>{{$t('description.apply')}}：apply@app.crypttops.com</p>
+          <p>{{$t('description.report')}}：ceo@app.crypttops.com</p>
+          <p>{{$t('description.coop')}}：coop@app.crypttops.com</p>
         </div>
         <div class="content1" style="border:none;">
           <h5>{{$t('description.community')}}</h5>

@@ -2,9 +2,8 @@
   <div class="login_form mob-login">
     <div class="login_right">
       <div style="color: #F90;margin-bottom: 60px;margin-top: 60px;">
-        <h1 style="border-left: 5px solid #F90;padding-left: 10px;letter-spacing: 2px;line-height:30px;height:30px;">exchange.crypttops.com</h1>
+        <h1 style="border-left: 5px solid #F90;padding-left: 10px;letter-spacing: 2px;line-height:30px;height:30px;">crypttops.com</h1>
         <p style="padding-left:15px;letter-spacing: 6px;">{{$t('footer.gsmc')}}</p>
-        <div style="margin-left:5px;letter-spacing: 2px;margin-top: 10px;color: rgb(226, 226, 227);font-size:13px;padding: 5px 10px;">安全 ● 诚实 ● 公平 ● 热情 ● 开放</div>
       </div>
       <Form v-if="allowRegister" ref="formInline" :model="formInline" :rules="ruleInline" inline>
         <FormItem prop="username" style="display:none;">
@@ -14,6 +13,7 @@
         <FormItem prop="user">
           <Input type="text" v-model="formInline.user" :placeholder="key">
             <Select v-model="country" slot="prepend" style="width: 65px;border-bottom: 1px solid #27313e;">
+              <Option value="+254" label="+254"><span>+254</span><span style="margin-left:10px;color:#ccc">Kenya</span></Option>
               <Option value="中国" label="+86"><span>+86</span><span style="margin-left:10px;color:#ccc">中国</span></Option>
 	      <Option value="新加坡" label="+65"><span>+65</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.singapore')}}</span></Option>
               <Option value="韩国" label="+82"><span>+82</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.korea')}}</span></Option>

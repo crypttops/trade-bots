@@ -234,7 +234,7 @@
         <div class="footer_left">
           <img  src="./assets/images/logo-bottom.png" style="margin:0" >
           <p style="letter-spacing:2px;">{{$t("footer.gsmc")}}</p>
-          <p>Copyright © 2012-2021 www.exchange.crypttops.com All rights reserved.&nbsp;&nbsp;</p>
+          <p>Copyright © 2012-2021 www.app.crypttops.com All rights reserved.&nbsp;&nbsp;</p>
           <div class="social-list">
             <ul>
               <Tooltip content="Wechat" theme="dark" placement="top">
@@ -354,7 +354,7 @@
               <poptip width="200" trigger="hover" placement="right">
                 <a href="javascript:;" class="wechat">{{$t("footer.kfyx")}}</a>
                 <div slot="content">
-                  <p style="text-align:center;">service@exchange.crypttops.com</p>
+                  <p style="text-align:center;">service@app.crypttops.com</p>
                 </div>
               </poptip>
             </li>
@@ -362,7 +362,7 @@
               <poptip width="200" trigger="hover" placement="right">
                 <a href="javascript:;" class="wechat">{{$t("footer.swhz")}}</a>
                 <div slot="content">
-                  <p style="text-align:center;">support@exchange.crypttops.com</p>
+                  <p style="text-align:center;">support@app.crypttops.com</p>
                 </div>
               </poptip>
             </li>
@@ -370,7 +370,7 @@
               <poptip width="200" trigger="hover" placement="right">
                 <a href="javascript:;" class="wechat">{{$t("footer.sbsq")}}</a>
                 <div slot="content">
-                  <p style="text-align:center;">list@exchange.crypttops.com</p>
+                  <p style="text-align:center;">list@app.crypttops.com</p>
                 </div>
               </poptip>
             </li>
@@ -378,7 +378,7 @@
               <poptip width="200" trigger="hover" placement="right">
                 <a href="javascript:;" class="wechat">{{$t("footer.tsjb")}}</a>
                 <div slot="content">
-                  <p style="text-align:center;">ceo@exchange.crypttops.com</p>
+                  <p style="text-align:center;">ceo@app.crypttops.com</p>
                 </div>
               </poptip>
             </li>
