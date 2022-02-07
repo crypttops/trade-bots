@@ -1,6 +1,9 @@
 export default [
-    { path: '/', component: resolve=>(require(["../pages/index/Index"],resolve)) },
-    { path: '/index', component: resolve=>(require(["../pages/index/Index"],resolve)) },
+    // { path: '/', component: resolve=>(require(["../pages/index/Index"],resolve)) },
+    { path: '/', redirect: '/exchange/btc_usdt'},
+    { path: '/index', redirect: '/exchange/btc_usdt'},
+    // { path: '/Index', redirectTo: '/exchange/btc_usdt'},
+    // { path: '/index', component: resolve=>(require(["../pages/index/Index"],resolve)) },
     { path: '/login', component: resolve=>(require(["../pages/uc/Login"],resolve)) },
     { path: '/login/returnUrl/:returnUrl', component: resolve=>(require(["../pages/uc/Login"],resolve)) },
     { path: '/register', component: resolve=>(require(["../pages/uc/Register"],resolve)) },
