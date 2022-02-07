@@ -1,6 +1,5 @@
 <template>
   <div class="container swap" :class="skin">
- 
     <div class="main">
       <div style="display: flex;gap: 1em;justify-content: space-between;">
         <div class="center">
@@ -81,7 +80,7 @@
       </div>
     </div>
     <Modal title="Configure Bot" v-model="selectBotModal" class-name="vertical-center-modal">
-      <div class="flex-cols">
+      <div class="flex-rows">
         <Card class="flex-col-2 bot-card" :bordered="false">
           <h2 class="title">DCA BOT</h2>
           <p class="text">
@@ -89,14 +88,28 @@
           </p>
           <Button class="btn" @click="configureDCAModal = true; selectBotModal = false">{{configBotBtn}}</Button>
         </Card>
-         <Card class="flex-col-2 bot-card" :bordered="false">
+        <Card class="flex-col-2 bot-card" :bordered="false">
          <h2 class="title">GRID BOT</h2>
           <p class="text">
             Place a series of purchase and sell orders 
             within a given price range in a grid system.
           </p>
           <Button class="btn" @click="configureGridModal = true; selectBotModal = false">{{configBotBtn}}</Button>
-        </Card>        
+        </Card> 
+        <div class="inactive-card">
+          <h2 class="title">Spot GRID</h2>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, expedita.
+          </p>
+          <Button class="btn" @click="configureGridModal = true; selectBotModal = false">{{configBotBtn}}</Button>
+        </div>
+        <div class="inactive-card">
+          <h2 class="title">Smart Rebalance</h2>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, expedita.
+          </p>
+          <Button class="btn" @click="configureGridModal = true; selectBotModal = false">{{configBotBtn}}</Button>
+        </div>
       </div>
     </Modal>
     <!-- Modal for DCA Bot -->
