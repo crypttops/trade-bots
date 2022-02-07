@@ -81,32 +81,32 @@
     </div>
     <Modal title="Configure Bot" v-model="selectBotModal" class-name="vertical-center-modal">
       <div class="flex-rows">
-        <Card class="flex-col-2 bot-card" :bordered="false">
+        <div class="bot-card">
           <h2 class="title">DCA BOT</h2>
           <p class="text">
             Divides up the total amount to be invested across periodic purchases of a target asset in an effort to reduce the impact of volatility on the overall purchase
           </p>
           <Button class="btn" @click="configureDCAModal = true; selectBotModal = false">{{configBotBtn}}</Button>
-        </Card>
-        <Card class="flex-col-2 bot-card" :bordered="false">
+        </div>
+        <div class="active-card">
          <h2 class="title">GRID BOT</h2>
           <p class="text">
             Place a series of purchase and sell orders 
             within a given price range in a grid system.
           </p>
           <Button class="btn" @click="configureGridModal = true; selectBotModal = false">{{configBotBtn}}</Button>
-        </Card> 
+        </div> 
         <div class="inactive-card">
-          <h2 class="title">Spot GRID</h2>
+          <h2 class="title">Futures GRID</h2>
           <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, expedita.
+            Quantitative trading strategy for futures markets. This trading bot automates buying and selling on spot trading.
           </p>
           <Button class="btn" @click="configureGridModal = true; selectBotModal = false">{{configBotBtn}}</Button>
         </div>
         <div class="inactive-card">
           <h2 class="title">Smart Rebalance</h2>
           <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, expedita.
+             Automatically develop a strategy that rebalances the position portfolio to restore its initially set proportions.
           </p>
           <Button class="btn" @click="configureGridModal = true; selectBotModal = false">{{configBotBtn}}</Button>
         </div>
