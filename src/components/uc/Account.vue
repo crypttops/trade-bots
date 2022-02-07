@@ -200,7 +200,7 @@ export default {
             }
         };
         return {
-            uploadHeaders:{'x-auth-token':localStorage.getItem('TOKEN')},
+            uploadHeaders:{'access-auth-token':localStorage.getItem('TOKEN')},
             uploadUrl:this.host+'/uc/upload/oss/image',
             aliImg:'',
             aliPreview:'',
