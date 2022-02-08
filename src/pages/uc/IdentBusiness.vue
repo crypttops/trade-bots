@@ -300,7 +300,7 @@ export default {
       },
       assetImg: "",
       tradeImg: "",
-      uploadHeaders: { "access-auth-token": localStorage.getItem("TOKEN") },
+      uploadHeaders: { "x-auth-token": localStorage.getItem("TOKEN") },
       uploadUrl: this.host + "/uc/upload/oss/image",
       returnReason: "",
       refuseReason: ""

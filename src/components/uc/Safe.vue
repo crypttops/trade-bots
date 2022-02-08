@@ -966,7 +966,7 @@ export default {
       backCardImg: require("../../assets/images/backCardImg.png"),
       handCardImg: require("../../assets/images/HandCardImg.png"),
 
-      uploadHeaders: { "access-auth-token": localStorage.getItem("TOKEN") },
+      uploadHeaders: { "x-auth-token": localStorage.getItem("TOKEN") },
       uploadUrl: this.host + "/uc/upload/oss/image",
 
       usernameS: "",
