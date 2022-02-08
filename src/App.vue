@@ -619,10 +619,10 @@ export default {
       });
     },
     changelanguage: function(name) {
-      console.log("change language: " + name);
 	  if(name!="en_US" && name!="ja_JP" && name!="ko_KR" && name!="de_DE" && name!="fr_FR" && name!="it_IT" && name!="es_ES" && name!="zh_HK" && name!="zh_CN"){
-		  
+		  console.log('Could not detect language');
 	  }else{
+      console.log('What language', name);
 		  this.$store.commit("setlang", name);
 		  this.$i18n.locale = name;
 		  this.reload();
