@@ -22,8 +22,9 @@ import bitsgapInstance from './config/axios.js';
 
 
 import ViewUI from 'view-design';
-// import "@/assets/custom-theme/index.less";
 import locale from 'view-design/dist/locale/en-US';
+import "@/assets/custom-theme/index.less";
+
 Vue.use(iView);
 Vue.use(VueClipboard);
 Vue.use(VueRouter);
