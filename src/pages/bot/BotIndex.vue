@@ -155,41 +155,45 @@
       </div>
     </div>
     <Modal
-      title="Configure Bot"
       v-model="selectBotModal"
       class-name="vertical-center-modal"
+      :footer-hide="true"
     >
       <div class="flex-rows">
         <div class="bot-card active-card">
           <h2 class="title">DCA BOT</h2>
-          <p class="text">
+          <div class="card-content flex-cols">
+            <p class="text">
             Divides up the total amount to be invested across periodic purchases
             of a target asset in an effort to reduce the impact of volatility on
             the overall purchase
-          </p>
-          <Button
-            class="btn"
-            @click="
-              configureDCAModal = true;
-              selectBotModal = false;
-            "
-            >{{ configBotBtn }}</Button
-          >
+            </p>
+            <Button
+              class="btn"
+              @click="
+                configureDCAModal = true;
+                selectBotModal = false;
+              "
+              >{{ configBotBtn }}</Button
+            >
+          </div>
         </div>
         <div class="bot-card active-card">
           <h2 class="title">GRID BOT</h2>
-          <p class="text">
-            Place a series of purchase and sell orders within a given price
-            range in a grid system.
-          </p>
-          <Button
-            class="btn"
-            @click="
-              configureGridModal = true;
-              selectBotModal = false;
-            "
-            >{{ configBotBtn }}</Button
-          >
+          <div class="card-content flex-cols">
+            <p class="text">
+              Place a series of purchase and sell orders within a given price
+              range in a grid system.
+            </p>
+            <Button
+              class="btn"
+              @click="
+                configureGridModal = true;
+                selectBotModal = false;
+              "
+              >{{ configBotBtn }}</Button
+            >
+          </div>
         </div>
         <div class="bot-card inactive-card">
           <h2 class="title">Futures GRID</h2>
@@ -197,14 +201,6 @@
             Quantitative trading strategy for futures markets. This trading bot
             automates buying and selling on spot trading.
           </p>
-          <Button
-            class="btn"
-            @click="
-              configureGridModal = true;
-              selectBotModal = false;
-            "
-            >{{ configBotBtn }}</Button
-          >
         </div>
         <div class="bot-card inactive-card">
           <h2 class="title">Smart Rebalance</h2>
@@ -212,14 +208,6 @@
             Automatically develop a strategy that rebalances the position
             portfolio to restore its initially set proportions.
           </p>
-          <Button
-            class="btn"
-            @click="
-              configureGridModal = true;
-              selectBotModal = false;
-            "
-            >{{ configBotBtn }}</Button
-          >
         </div>
       </div>
     </Modal>
@@ -3422,7 +3410,19 @@ $night-color: #fff;
 }
 
 .bot-card {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+  padding: 1em;
+}
+.bot-card.active-card {
+  background-color: #2c3b59;
+}
+.bot-card.inactive-card {
+  color: #7c7f82;
+  pointer-events: none;
+  border: 1px solid #7c7f82;
+}
+.card-content {
+  align-items: center;
 }
 .flex-col-2 {
   max-width: 50%;
