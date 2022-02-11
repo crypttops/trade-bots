@@ -1616,13 +1616,15 @@ export default {
   methods: {
     async getAllBots(userId) {
       let allBots = [];
+      let dcaBots = [];
+      let gridBots = [];
       // get dca bots first
       try {
         const dcaQuery = await bitsgapInstance.get(`${bitsgap.dcaBots}${userId}`)
-        const dcaBots = dcaQuery.data.result;
+        dcaBots = dcaQuery.data.result;
 
         const gridBotQuery = await bitsgapInstance.get(`${bitsgap.gridBots}${userId}`)
-        const gridBots = gridBotQuery.data.result;
+        gridBots = gridBotQuery.data.result;
         allBots = [...dcaBots, ...gridBots]
 
         // process extra operations
