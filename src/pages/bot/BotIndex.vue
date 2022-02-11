@@ -5,9 +5,7 @@
         <div class="center">
           <div class="symbol">
             <div class="item" style="margin-left: 10px">
-              <span class="coin"
-                >{{ currentCoin.symbol }} {{ $t("swap.swapindex") }}
-              </span>
+              <span class="coin">{{ currentCoin.symbol }} {{ $t("swap.swapindex") }}</span>
             </div>
             <div class="item">
               <span class="text">{{ $t("service.NewPrice") }}</span>
@@ -17,11 +15,8 @@
                   buy: currentCoin.change > 0,
                   sell: currentCoin.change < 0,
                 }"
-                >{{ currentCoin.close | toFixed(4) }}</span
-              >
-              <span class="price-cny"
-                >≈ ￥{{ (currentCoin.usdRate * CNYRate) | toFixed(2) }}</span
-              >
+              >{{ currentCoin.close | toFixed(4) }}</span>
+              <span class="price-cny">≈ ￥{{ (currentCoin.usdRate * CNYRate) | toFixed(2) }}</span>
             </div>
             <div class="item">
               <span class="text">{{ $t("service.Change") }}</span>
@@ -31,8 +26,7 @@
                   buy: currentCoin.change > 0,
                   sell: currentCoin.change < 0,
                 }"
-                >{{ currentCoin.rose }}</span
-              >
+              >{{ currentCoin.rose }}</span>
             </div>
             <div class="item">
               <span class="text">{{ $t("service.high") }}</span>
@@ -44,10 +38,10 @@
             </div>
             <div class="item">
               <span class="text">{{ $t("service.ExchangeNum") }}</span>
-              <span class="num"
-                >{{ currentCoin.volume | toFixed(4) }}
-                {{ currentCoin.coin }}</span
-              >
+              <span class="num">
+                {{ currentCoin.volume | toFixed(4) }}
+                {{ currentCoin.coin }}
+              </span>
             </div>
             <div class="item">
               <!-- <img src="../../assets/images/exchange/light-switch.png" alt=""> -->
@@ -58,22 +52,14 @@
               <span
                 @click="changeImgTable('k')"
                 :class="{ active: currentImgTable === 'k' }"
-                >{{ $t("swap.kline") }}</span
-              >
+              >{{ $t("swap.kline") }}</span>
               <span
                 @click="changeImgTable('s')"
                 :class="{ active: currentImgTable === 's' }"
-                >{{ $t("swap.depth") }}</span
-              >
+              >{{ $t("swap.depth") }}</span>
             </div>
-            <div
-              id="kline_container"
-              :class="{ hidden: currentImgTable === 's' }"
-            ></div>
-            <DepthGraph
-              :class="{ hidden: currentImgTable === 'k' }"
-              ref="depthGraph"
-            ></DepthGraph>
+            <div id="kline_container" :class="{ hidden: currentImgTable === 's' }"></div>
+            <DepthGraph :class="{ hidden: currentImgTable === 'k' }" ref="depthGraph"></DepthGraph>
           </div>
           <div style="width: 100%; margin-top: 5px; flex: 0 0 100%">
             <h2>Configured bots</h2>
@@ -85,28 +71,24 @@
                     size="small"
                     style="margin-right: 5px"
                     @click="editBot(row.id, row.botType, row, row)"
-                    >Edit</Button
-                  >
+                  >Edit</Button>
                   <Button
                     type="warning"
                     size="small"
                     @click="stopBot(row.id, row.botType, index)"
                     v-if="row.active"
-                    >Stop Bot</Button
-                  >
+                  >Stop Bot</Button>
                   <Button
                     type="success"
                     size="small"
                     @click="startBot(row.id, row.botType, index)"
                     v-if="!row.active"
-                    >Start Bot</Button
-                  >
+                  >Start Bot</Button>
                   <Button
                     type="error"
                     size="small"
                     @click="deleteBot(row.id, row.botType)"
-                    >Delete Bot</Button
-                  >
+                  >Delete Bot</Button>
                 </template>
               </Table>
             </div>
@@ -125,15 +107,14 @@
                   v-for="strategy in strategyList"
                   :value="strategy"
                   :key="strategy"
-                >
-                  {{ strategy }}
-                </div>
+                >{{ strategy }}</div>
               </TabPane>
               <TabPane label="Balance">
                 <Card class="bg-color">
-                  <p slot="title" style="color: #fff">
-                    Exchange Name: {{ exchangesBalances.exchangeName || "" }}
-                  </p>
+                  <p
+                    slot="title"
+                    style="color: #fff"
+                  >Exchange Name: {{ exchangesBalances.exchangeName || "" }}</p>
                   <List size="small" border>
                     <ListItem
                       item-layout="horizontal"
@@ -141,10 +122,7 @@
                       :key="item.asset"
                       style="list-style-type: none; color: #fff"
                     >
-                      <ListItemMeta
-                        :title="item.asset"
-                        :description="item.free"
-                      />
+                      <ListItemMeta :title="item.asset" :description="item.free" />
                     </ListItem>
                   </List>
                 </Card>
@@ -154,28 +132,23 @@
         </div>
       </div>
     </div>
-    <Modal
-      v-model="selectBotModal"
-      class-name="vertical-center-modal"
-      :footer-hide="true"
-    >
+    <Modal v-model="selectBotModal" class-name="vertical-center-modal" :footer-hide="true">
       <div class="flex-rows">
         <div class="bot-card active-card">
           <h2 class="title">DCA BOT</h2>
           <div class="card-content flex-cols">
             <p class="text">
-            Divides up the total amount to be invested across periodic purchases
-            of a target asset in an effort to reduce the impact of volatility on
-            the overall purchase
+              Divides up the total amount to be invested across periodic purchases
+              of a target asset in an effort to reduce the impact of volatility on
+              the overall purchase
             </p>
             <Button
               class="btn"
               @click="
-                configureDCAModal = true;
-                selectBotModal = false;
+  configureDCAModal = true;
+selectBotModal = false;
               "
-              >{{ configBotBtn }}</Button
-            >
+            >{{ configBotBtn }}</Button>
           </div>
         </div>
         <div class="bot-card active-card">
@@ -188,11 +161,10 @@
             <Button
               class="btn"
               @click="
-                configureGridModal = true;
-                selectBotModal = false;
+  configureGridModal = true;
+selectBotModal = false;
               "
-              >{{ configBotBtn }}</Button
-            >
+            >{{ configBotBtn }}</Button>
           </div>
         </div>
         <div class="bot-card inactive-card">
@@ -222,22 +194,17 @@
       <div class="flex-cols">
         <div class="flex-col-2">
           <div>
-            <label for="">Bot Name</label>
+            <label for>Bot Name</label>
             <Input v-model="dcaConfigs.botname" />
           </div>
           <div>
-            <label for="">Trade Pairs</label>
+            <label for>Trade Pairs</label>
             <Select v-model="dcaConfigs.pairlist" multiple>
-              <Option
-                v-for="symbol in availablePairs"
-                :value="symbol"
-                :key="symbol"
-                >{{ symbol }}</Option
-              >
+              <Option v-for="symbol in availablePairs" :value="symbol" :key="symbol">{{ symbol }}</Option>
             </Select>
           </div>
           <div>
-            <label for="">Side</label>
+            <label for>Side</label>
             <div>
               <RadioGroup v-model="dcaConfigs.side" type="button">
                 <Radio label="BUY"></Radio>
@@ -246,7 +213,7 @@
             </div>
           </div>
           <div>
-            <label for="">Order Type</label>
+            <label for>Order Type</label>
             <div>
               <RadioGroup v-model="dcaConfigs.ordertype" type="button">
                 <Radio label="Market"></Radio>
@@ -260,11 +227,11 @@
           </div>
           <div class="flex-cols">
             <div class="flex-col-2">
-              <label for="">Take Profit</label>
+              <label for>Take Profit</label>
               <InputNumber v-model="dcaConfigs.takeprofit"></InputNumber>
             </div>
             <div class="flex-col-2">
-              <label for="">Stop Loss</label>
+              <label for>Stop Loss</label>
               <InputNumber v-model="dcaConfigs.stoploss"></InputNumber>
             </div>
           </div>
@@ -277,8 +244,7 @@
                 v-for="exchange in exchangeList"
                 :value="exchange.id"
                 :key="exchange.name"
-                >{{ exchange.name }}</Option
-              >
+              >{{ exchange.name }}</Option>
             </Select>
           </div>
           <div>
@@ -296,36 +262,31 @@
             </div>
           </div>
           <div>
-            <label for="">Select Strategy</label>
+            <label for>Select Strategy</label>
             <Select v-model="dcaConfigs.strategy">
               <Option
                 v-for="strategy in strategyList"
                 :value="strategy"
                 :key="strategy"
-                >{{ strategy }}</Option
-              >
+              >{{ strategy }}</Option>
             </Select>
           </div>
           <div>
-            <label for="">Time Frame</label>
+            <label for>Time Frame</label>
             <Input v-model="dcaConfigs.timeframe" />
           </div>
           <div>
-            <label for="">Interval Between Orders</label>
-            <InputNumber
-              v-model="dcaConfigs.interval_between_orders"
-            ></InputNumber>
+            <label for>Interval Between Orders</label>
+            <InputNumber v-model="dcaConfigs.interval_between_orders"></InputNumber>
           </div>
           <div class="flex-col">
             <div class="flex-col-2">
-              <label for="">Order Timeout</label>
+              <label for>Order Timeout</label>
               <InputNumber v-model="dcaConfigs.order_timeout"></InputNumber>
             </div>
             <div class="flex-col-2">
-              <label for="">Maximum Trades</label>
-              <InputNumber
-                v-model="dcaConfigs.max_active_trade_count"
-              ></InputNumber>
+              <label for>Maximum Trades</label>
+              <InputNumber v-model="dcaConfigs.max_active_trade_count"></InputNumber>
             </div>
           </div>
         </div>
@@ -342,26 +303,21 @@
       <div class="flex-cols">
         <div class="flex-col-2">
           <div>
-            <label for="">Bot Name</label>
+            <label for>Bot Name</label>
             <Input v-model="gridConfigs.botName" />
           </div>
           <div>
-            <label for="">Symbol</label>
+            <label for>Symbol</label>
             <Select v-model="gridConfigs.symbol">
-              <Option
-                v-for="symbol in availablePairs"
-                :value="symbol"
-                :key="symbol"
-                >{{ symbol }}</Option
-              >
+              <Option v-for="symbol in availablePairs" :value="symbol" :key="symbol">{{ symbol }}</Option>
             </Select>
           </div>
           <div>
-            <label for="">Quantity per grid</label>
+            <label for>Quantity per grid</label>
             <InputNumber v-model="gridConfigs.qtyPerGrid"></InputNumber>
           </div>
           <div class="flex-col-2">
-            <label for="">upper Limit</label>
+            <label for>upper Limit</label>
             <InputNumber v-model="gridConfigs.upperLimitPrice"></InputNumber>
           </div>
         </div>
@@ -373,8 +329,7 @@
                 v-for="exchange in exchangeList"
                 :value="exchange.id"
                 :key="exchange.name"
-                >{{ exchange.name }}</Option
-              >
+              >{{ exchange.name }}</Option>
             </Select>
           </div>
           <div>
@@ -382,11 +337,11 @@
             <InputNumber v-model="gridConfigs.maxTradeCounts"></InputNumber>
           </div>
           <div>
-            <label for="">Number of Grids</label>
+            <label for>Number of Grids</label>
             <InputNumber v-model="gridConfigs.gridQty"></InputNumber>
           </div>
           <div>
-            <label for="">Lower Limit</label>
+            <label for>Lower Limit</label>
             <InputNumber v-model="gridConfigs.lowerLimitPrice"></InputNumber>
           </div>
         </div>
@@ -1368,7 +1323,7 @@ export default {
         // 逐仓，直接usdt余额即可
         return parseInt(
           (this.buyLeverage * this.contractWalletInfo.usdtBalance) /
-            this.contractCoinInfo.shareNumber
+          this.contractCoinInfo.shareNumber
         );
       } else {
         // 全仓模式
@@ -1404,14 +1359,14 @@ export default {
         if (lossandp >= 0) {
           return parseInt(
             (this.buyLeverage * this.contractWalletInfo.usdtBalance) /
-              this.contractCoinInfo.shareNumber
+            this.contractCoinInfo.shareNumber
           );
         } else {
           // 小于0，因为是全仓，所以需要考虑盈亏问题，计算方法（多仓杠杆 *（可用余额 - 亏损金额）/ 合约面值）
           return parseInt(
             (this.buyLeverage *
               (this.contractWalletInfo.usdtBalance + lossandp)) /
-              this.contractCoinInfo.shareNumber
+            this.contractCoinInfo.shareNumber
           );
         }
       }
@@ -1424,7 +1379,7 @@ export default {
         // 逐仓，直接usdt余额即可
         return parseInt(
           (this.sellLeverage * this.contractWalletInfo.usdtBalance) /
-            this.contractCoinInfo.shareNumber
+          this.contractCoinInfo.shareNumber
         );
       } else {
         // 计算可用
@@ -1454,13 +1409,13 @@ export default {
         if (lossandp >= 0) {
           return parseInt(
             (this.sellLeverage * this.contractWalletInfo.usdtBalance) /
-              this.contractCoinInfo.shareNumber
+            this.contractCoinInfo.shareNumber
           );
         } else {
           return parseInt(
             (this.sellLeverage *
               (this.contractWalletInfo.usdtBalance - lossandp)) /
-              this.contractCoinInfo.shareNumber
+            this.contractCoinInfo.shareNumber
           );
         }
       }
@@ -1494,7 +1449,7 @@ export default {
           this.currentPositionList[0],
           "position",
           this.contractWalletInfo.usdtBuyPosition +
-            this.contractWalletInfo.usdtFrozenBuyPosition
+          this.contractWalletInfo.usdtFrozenBuyPosition
         );
         this.$set(
           this.currentPositionList[0],
@@ -1520,8 +1475,8 @@ export default {
           this.currentPositionList[0],
           "mRatio",
           (buyPl + this.contractWalletInfo.usdtBuyPrincipalAmount) /
-            this.contractWalletInfo.usdtBuyPrincipalAmount /
-            this.contractWalletInfo.usdtBuyLeverage
+          this.contractWalletInfo.usdtBuyPrincipalAmount /
+          this.contractWalletInfo.usdtBuyLeverage
         );
         this.$set(
           this.currentPositionList[0],
@@ -1565,7 +1520,7 @@ export default {
           this.currentPositionList[temIndex],
           "position",
           this.contractWalletInfo.usdtSellPosition +
-            this.contractWalletInfo.usdtFrozenSellPosition
+          this.contractWalletInfo.usdtFrozenSellPosition
         );
         this.$set(
           this.currentPositionList[temIndex],
@@ -1591,8 +1546,8 @@ export default {
           this.currentPositionList[temIndex],
           "mRatio",
           (sellPl + this.contractWalletInfo.usdtSellPrincipalAmount) /
-            this.contractWalletInfo.usdtSellPrincipalAmount /
-            this.contractWalletInfo.usdtSellLeverage
+          this.contractWalletInfo.usdtSellPrincipalAmount /
+          this.contractWalletInfo.usdtSellLeverage
         );
         this.$set(
           this.currentPositionList[temIndex],
@@ -1614,12 +1569,12 @@ export default {
       if (this.contractWalletInfo.usdtPattern == "CROSSED") {
         if (
           buyPl +
-            sellPl +
-            this.contractWalletInfo.usdtBalance +
-            this.contractWalletInfo.usdtFrozenBalance +
-            this.contractWalletInfo.usdtBuyPrincipalAmount +
-            this.contractWalletInfo.usdtSellPrincipalAmount <
-            0 &&
+          sellPl +
+          this.contractWalletInfo.usdtBalance +
+          this.contractWalletInfo.usdtFrozenBalance +
+          this.contractWalletInfo.usdtBuyPrincipalAmount +
+          this.contractWalletInfo.usdtSellPrincipalAmount <
+          0 &&
           this.checkAllCount < 5
         ) {
           this.getMemberContractWallet();
@@ -1659,48 +1614,41 @@ export default {
     },
   },
   methods: {
-    getAllBots(userId) {
+    async getAllBots(userId) {
       let allBots = [];
-      let dcas = [];
-      let gridbots = [];
-      bitsgapInstance
-        .get(`${bitsgap.dcaBots}${userId}`)
-        .then((response) => {
-          const dcaBots = response.data.result;
+      // get dca bots first
+      try {
+        const dcaQuery = await bitsgapInstance.get(`${bitsgap.dcaBots}${userId}`)
+        const dcaBots = dcaQuery.data.result;
 
-          bitsgapInstance
-            .get(`${bitsgap.gridBots}${userId}`)
-            .then((grid) => {
-              const gridBots = grid.data.result;
+        const gridBotQuery = await bitsgapInstance.get(`${bitsgap.gridBots}${userId}`)
+        const gridBots = gridBotQuery.data.result;
+        allBots = [...dcaBots, ...gridBots]
 
-              allBots = [...dcaBots, ...gridBots];
+        // process extra operations
+        for (var i = 0; i < allBots.length; i++) {
+          const bot = allBots[i];
+          bot.botName = bot.botname || bot.botName;
+          bot.botType = bot.botType || "GRID";
+          bot.is_running == true
+            ? (bot.running = "Running")
+            : (bot.running = "Inactive");
+          bot.is_running == true
+            ? (bot.active = true)
+            : (bot.active = false);
+          bot.exchange = this.exchangeList.find(
+            (e) => e.id == bot.exchange_id
+          ).type;
+        }
+        this.configuredBots = allBots;
 
-              for (var i = 0; i < allBots.length; i++) {
-                const bot = allBots[i];
-                bot.botName = bot.botname || bot.botName;
-                bot.botType = bot.botType || "GRID";
-                bot.is_running == true
-                  ? (bot.running = "Running")
-                  : (bot.running = "Inactive");
-                bot.is_running == true
-                  ? (bot.active = true)
-                  : (bot.active = false);
-                bot.exchange = this.exchangeList.find(
-                  (e) => e.id == bot.exchange_id
-                ).type;
-              }
-              this.configuredBots = allBots;
-            })
-            .catch((error) => {
-              this.$Message.error({
-                content: "Could not get configured GRID Bots",
-                duration: 5,
-              });
-            });
-        })
-        .catch((error) => {
-          this.$Message.error("Could not get configured DCA Bots");
+      } catch (error) {
+        console.log('error getting bots', error)
+        this.$Message.error({
+          content: "Could not get configured Bots",
+          duration: 5,
         });
+      }
     },
     editBot(bot_id, bot_type, row) {
       if (bot_type === "DCA") {
@@ -1744,8 +1692,8 @@ export default {
       };
       bitsgapInstance
         .post(bitsgap.gridBotStart, payload)
-        .then((response) => {
-          this.getAllBots(this.userId);
+        .then(async(response) => {
+          await this.getAllBots(this.userId);
           this.$Message.success({
             content: this.gridConfigs.botName + " " + "Started",
             duration: 5,
@@ -1761,13 +1709,13 @@ export default {
     createDCABot() {
       bitsgapInstance
         .post(bitsgap.dcaBot, this.dcaConfigs)
-        .then((response) => {
+        .then(async(response) => {
           if (response.data.status == 403) {
             this.$Message.error({
               content: response.data.message,
               duration: 5,
             });
-            this.getAllBots(this.userId);
+            await this.getAllBots(this.userId);
           } else {
             this.$Message.success({
               content: this.dcaConfigs.botname + " " + "DCA BOT CREATED",
@@ -1789,12 +1737,12 @@ export default {
       };
       bitsgapInstance
         .post(bitsgap.dcaBotStart, payload)
-        .then((response) => {
+        .then(async(response) => {
           this.$Message.success({
             content: this.dcaConfigs.bot_name + " " + "Started",
             duration: 5,
           });
-          this.getAllBots(this.userId);
+          await this.getAllBots(this.userId);
         })
         .catch((error) => {
           this.$Message.error({
@@ -1810,12 +1758,12 @@ export default {
       };
       bitsgapInstance
         .post(bitsgap.dcaBotStop, payload)
-        .then((response) => {
+        .then(async (response) => {
           this.$Message.success({
             content: this.dcaConfigs.bot_name + " " + "Stopped",
             duration: 5,
           });
-          this.getAllBots(this.userId);
+          await this.getAllBots(this.userId);
         })
         .catch((error) => {
           this.$Message.error({
@@ -1831,12 +1779,12 @@ export default {
       };
       bitsgapInstance
         .post(bitsgap.gridBotStop, payload)
-        .then((response) => {
+        .then(async(response) => {
           this.$Message.success({
             content: this.gridConfigs.botName + " " + "Stopped",
             duration: 5,
           });
-          this.getAllBots(this.userId);
+          await this.getAllBots(this.userId);
         })
         .catch((error) => {
           this.$Message.error({
@@ -1852,12 +1800,12 @@ export default {
       };
       bitsgapInstance
         .delete(`${bitsgap.dcaBot}?userId=${this.userId}&bot_id=${botId}`)
-        .then((response) => {
+        .then(async(response) => {
           this.$Message.success({
             content: this.dcaConfigs.bot_name + " " + "Successfully Deleted",
             duration: 5,
           });
-          this.getAllBots(this.userId);
+          await this.getAllBots(this.userId);
         })
         .catch((error) => {
           console.log(error.message);
@@ -1877,13 +1825,13 @@ export default {
         .delete(
           `${bitsgap.createGridBot}?userId=${this.userId}&bot_id=${botId}`
         )
-        .then((response) => {
+        .then(async(response) => {
           console.log(response);
           this.$Message.success({
             content: this.dcaConfigs.bot_name + " " + "Successfully Deleted",
             duration: 5,
           });
-          this.getAllBots(this.userId);
+          await this.getAllBots(this.userId);
         })
         .catch((error) => {
           this.$Message.error({
@@ -1931,13 +1879,13 @@ export default {
       };
       bitsgapInstance
         .put(bitsgap.dcaBot, updated)
-        .then((response) => {
+        .then(async(response) => {
           this.$Message.success({
             content:
               this.dcaConfigs.bot_name + " " + "DCA Bot updated successfully",
             duration: 5,
           });
-          this.getAllBots(this.userId);
+          await this.getAllBots(this.userId);
         })
         .catch((error) => {
           console.log(`Could not update DCA bot ${error.message}`);
@@ -1958,8 +1906,8 @@ export default {
       };
       bitsgapInstance
         .put(bitsgap.createGridBot, updatedata)
-        .then((response) => {
-          this.getAllBots(this.userId);
+        .then(async(response) => {
+          await this.getAllBots(this.userId);
           this.$Message.success({
             content:
               this.gridConfigs.botName + " " + "GRID Bot updated successfully",
@@ -1991,7 +1939,7 @@ export default {
     createGridBotEndpoint() {
       bitsgapInstance
         .post(bitsgap.createGridBot, this.gridConfigs)
-        .then((response) => {
+        .then(async(response) => {
           if (response.data.status == 403) {
             this.$Message.warning({
               content: response.data.message,
@@ -2003,7 +1951,7 @@ export default {
               content: response.data.message,
               duration: 5,
             });
-            this.getAllBots(this.userId);
+            await this.getAllBots(this.userId);
           }
         })
         .catch((error) => {
@@ -2036,13 +1984,11 @@ export default {
           if (exchanges != []) {
             for (var i = 0, len = exchanges.length; i < len; i++) {
               let exchange = {};
-              console.log(exchanges[i]);
               exchange = {
                 id: exchanges[i].exchange_id,
                 name: exchanges[i].exchange_name,
                 type: exchanges[i].exchange_type,
               };
-              console.log("Exchanges", exchange);
               exchangeDetails.push(exchange);
             }
           }
@@ -2103,8 +2049,8 @@ export default {
       this.sliderClosePercent = 0;
       this.loadExchanges();
       this.loadStrategies();
-      this.getAllBots(this.userId);
       this.loadExchangesBalances();
+      this.getAllBots(this.userId).then(res => console.log(res)).catch(err => console.log('err', err));
     },
     tipFormat(val) {
       return val + "%";
@@ -2646,7 +2592,7 @@ export default {
               var sellPL =
                 (1 -
                   this.currentCoin.price /
-                    this.contractWalletInfo.usdtSellPrice) *
+                  this.contractWalletInfo.usdtSellPrice) *
                 (this.contractWalletInfo.usdtSellPosition +
                   this.contractWalletInfo.usdtFrozenSellPosition) *
                 this.contractWalletInfo.usdtShareNumber;
@@ -2860,39 +2806,39 @@ export default {
       if (that.isLogin) {
         //订阅委托取消信息
         /*
-		  stompClient.subscribe(
-		    "/topic/swap/order-canceled/" +
-		      that.currentCoin.symbol +
-		      "/" +
-		      that.member.id,
-		    function(msg) {
-		      var resp = JSON.parse(msg.body);
-		      that.refreshAccount();
-		    }
-		  );
-		  //订阅委托交易完成
-		  stompClient.subscribe(
-		    "/topic/swap/order-completed/" +
-		      that.currentCoin.symbol +
-		      "/" +
-		      that.member.id,
-		    function(msg) {
-		      var resp = JSON.parse(msg.body);
-		      that.refreshAccount();
-		    }
-		  );
-		  //订阅委托部分交易
-		  stompClient.subscribe(
-		    "/topic/swap/order-trade/" +
-		      that.currentCoin.symbol +
-		      "/" +
-		      that.member.id,
-		    function(msg) {
-		      var resp = JSON.parse(msg.body);
-		      that.refreshAccount();
-		    }
-		  );
-		  */
+      stompClient.subscribe(
+        "/topic/swap/order-canceled/" +
+          that.currentCoin.symbol +
+          "/" +
+          that.member.id,
+        function(msg) {
+          var resp = JSON.parse(msg.body);
+          that.refreshAccount();
+        }
+      );
+      //订阅委托交易完成
+      stompClient.subscribe(
+        "/topic/swap/order-completed/" +
+          that.currentCoin.symbol +
+          "/" +
+          that.member.id,
+        function(msg) {
+          var resp = JSON.parse(msg.body);
+          that.refreshAccount();
+        }
+      );
+      //订阅委托部分交易
+      stompClient.subscribe(
+        "/topic/swap/order-trade/" +
+          that.currentCoin.symbol +
+          "/" +
+          that.member.id,
+        function(msg) {
+          var resp = JSON.parse(msg.body);
+          that.refreshAccount();
+        }
+      );
+      */
       }
 
       //订阅盘口消息
@@ -3250,13 +3196,13 @@ export default {
           temVolume = parseInt(
             (this.contractWalletInfo.usdtSellPosition *
               this.sliderClosePercent) /
-              100
+            100
           );
         } else {
           temVolume = parseInt(
             (this.contractWalletInfo.usdtBuyPosition *
               this.sliderClosePercent) /
-              100
+            100
           );
         }
 
