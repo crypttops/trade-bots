@@ -35,7 +35,7 @@
           </router-link>
         </p>
         <FormItem style="margin-bottom:15px;">
-          <Button class="login_btn">{{$t('uc.login.login')}}</Button>
+          <Button type="primary" class="login_btn">{{$t('uc.login.login')}}</Button>
         </FormItem>
         <div class='to_register'>
           <span>{{$t('uc.login.noaccount')}}</span>
@@ -49,36 +49,35 @@
 <style scoped lang="scss">
 /* 验证码 */
 .login_form {
-  background: #0b1520 url(../../assets/images/login_bg.png) no-repeat center center;
+  // background: #0b1520 url(../../assets/images/login_bg.png) no-repeat center center;
   height: 760px;
   position: relative;
   overflow: hidden;
   .login_right {
     padding: 20px 30px 20px 30px;
     position: absolute;
-    background: #17212e;
+    // background: #17212e;
     width: 350px;
     height: 330px;
     left: 50%;
     top: 50%;
     margin-left: -175px;
     margin-top: -165px;
-    border-top: 4px solid #f0ac19;
+    // border-top: 4px solid #f0ac19;
     border-radius: 5px;
     form.ivu-form.ivu-form-label-right.ivu-form-inline {
       .login_title{
         height: 70px;
-        color: #fff;
+        // color: #fff;
       }
       .ivu-form-item {
         .ivu-form-item-content {
           .login_btn.ivu-btn {
             width: 100%;
-            background-color: #f0ac19;
+            // background-color: #f0ac19;
             outline: none;
-            border-color: #f0ac19;
-            color: #fff;
-            font-size: 18px;
+            // border-color: #f0ac19;
+            // color: #fff;
             border-radius: 5px;
             &:focus {
               -moz-box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff;
@@ -98,7 +97,7 @@
     }
     a {
       float: right;
-      color: #f0ac19;
+      // color: #f0ac19;
     }
   }
 }
@@ -292,13 +291,13 @@ export default {
               border-bottom: 1px solid #27313e;
               border-radius:0;
               // color:#fff;
-              &:focus {
-                border: none;
-                border-bottom: 1px solid #27313e;
-                -moz-box-shadow: 2px 2px 5px transparent, -2px -2px 4px transparent;
-                -webkit-box-shadow: 2px 2px 5px transparent, -2px -2px 4px transparent;
-                box-shadow: 2px 2px 5px transparent, -2px -2px 4px transparent;
-              }
+              // &:focus {
+              //   border: none;
+              //   border-bottom: 1px solid #27313e;
+              //   -moz-box-shadow: 2px 2px 5px transparent, -2px -2px 4px transparent;
+              //   -webkit-box-shadow: 2px 2px 5px transparent, -2px -2px 4px transparent;
+              //   box-shadow: 2px 2px 5px transparent, -2px -2px 4px transparent;
+              // }
             }
           }
         }
@@ -315,17 +314,17 @@ export default {
   right: 2px;
 }
 
-.ivu-form-item-error .ivu-input-group-append, .ivu-form-item-error .ivu-input-group-prepend{
-  background-color: #17212e;
-  border-color: transparent;
-}
+// .ivu-form-item-error .ivu-input-group-append, .ivu-form-item-error .ivu-input-group-prepend{
+//   background-color: #17212e;
+//   border-color: transparent;
+// }
 .ivu-form-item-error .ivu-select-arrow{
   color: #808695;
 }
 
-.login_right .ivu-select-dropdown{
-  background: #1c2a32;
-}
+// .login_right .ivu-select-dropdown{
+//   background: #1c2a32;
+// }
 </style>
 <style>
   .ivu-select-single .ivu-select-selection .ivu-select-placeholder, .ivu-select-single .ivu-select-selection .ivu-select-selected-value{

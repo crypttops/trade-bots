@@ -733,7 +733,7 @@ export default {
         .layout-logo{
           width: 300px;
           height: 48px;
-          background: url(./assets/images/logo.png) no-repeat;
+          background: url(./assets/images/logo-light.png) no-repeat;
           background-size: 100% 100%;
           float: left;
           position: absolute;
@@ -748,22 +748,22 @@ export default {
               background: none;
               .ivu-menu {
                 a {
-                  &:hover {
-                    li {
-                      background: none;
-                      color: #f0a70a;
-                    }
-                  }
-                  li.ivu-menu-item.ivu-menu-item-active.ivu-menu-item-selected {
-                    color: #f0a70a;
-                        border-bottom: 3px solid #ffa800;
-                  }
+                  // &:hover {
+                  //   li {
+                  //     background: none;
+                  //     color: #f0a70a;
+                  //   }
+                  // }
+                  // li.ivu-menu-item.ivu-menu-item-active.ivu-menu-item-selected {
+                  //   color: #f0a70a;
+                  //       border-bottom: 3px solid #ffa800;
+                  // }
                 }
-                .router-link-exact-active.router-link-active {
-                  li {
-                    color: #f0a70a;
-                  }
-                }
+                // .router-link-exact-active.router-link-active {
+                //   li {
+                //     color: #f0a70a;
+                //   }
+                // }
               }
             }
             .ivu-menu-vertical.ivu-menu-light {
@@ -927,10 +927,10 @@ export default {
       border-color: transparent;
     }
   }
-  .ivu-input-group-prepend {
-    background-color: #0b1520;
-    border: 1px solid #0b1520;
-  }
+  // .ivu-input-group-prepend {
+  //   background-color: #0b1520;
+  //   border: 1px solid #0b1520;
+  // }
   .page-content {
     .time_download {
       padding: 0 80px;
@@ -1032,7 +1032,7 @@ export default {
         .layout-logo {
           width: 300px;
           height: 48px;
-          background: url(./assets/images/logo.png) no-repeat;
+          background: url(./assets/images/logo-light.png) no-repeat;
           background-size: 100% 100%;
           float: left;
           position: absolute;
@@ -1045,28 +1045,28 @@ export default {
           .header_nav {
             display: none;
             li.ivu-menu-submenu.ivu-menu-item-active.ivu-menu-opened.ivu-menu-child-item-active {
-              background: #172636;
+              // background: #172636;
               .ivu-menu {
                 a {
-                  &:hover {
-                    li {
-                      background: none;
-                      color: #f0a70a;
-                    }
-                  }
-                  li.ivu-menu-item.ivu-menu-item-active.ivu-menu-item-selected {
-                    color: #f0a70a;
-                    border-bottom: 3px solid #ffa800;
-                  }
-                  li {
-                    color: #828ea1;
-                  }
+                  // &:hover {
+                  //   li {
+                  //     background: none;
+                  //     color: #f0a70a;
+                  //   }
+                  // }
+                  // li.ivu-menu-item.ivu-menu-item-active.ivu-menu-item-selected {
+                  //   color: #f0a70a;
+                  //   border-bottom: 3px solid #ffa800;
+                  // }
+                  // li {
+                  //   color: #828ea1;
+                  // }
                 }
-                .router-link-exact-active.router-link-active {
-                  li {
-                    color: #f0a70a;
-                  }
-                }
+                // .router-link-exact-active.router-link-active {
+                //   li {
+                //     color: #f0a70a;
+                //   }
+                // }
               }
             }
             .ivu-menu-vertical.ivu-menu-light {
@@ -1283,124 +1283,124 @@ export default {
   padding-top: 60px;
 }
 
-.ivu-table-filter-list .ivu-table-filter-select-item {
-  color: #ccc;
-  &:hover {
-    background-color: #27313e;
-    color: #f0ac19;
-  }
-}
-.ivu-table-filter-list .ivu-table-filter-select-item-selected {
-  color: #f0ac19;
-  &:hover {
-    color: #f0ac19;
-  }
-}
+// .ivu-table-filter-list .ivu-table-filter-select-item {
+//   color: #ccc;
+//   &:hover {
+//     background-color: #27313e;
+//     color: #f0ac19;
+//   }
+// }
+// .ivu-table-filter-list .ivu-table-filter-select-item-selected {
+//   color: #f0ac19;
+//   &:hover {
+//     color: #f0ac19;
+//   }
+// }
 
-.ivu-table-filter i.on {
-  color: #fff;
-}
-//tips
-.ivu-message {
-  color: #333;
-}
-.ivu-poptip-inner {
-  background-color: #27313e;
-  color: #fff;
-  .ivu-poptip-body-content-inner {
-    color: #fff;
-  }
-}
-.ivu-poptip-popper {
-  // border-top-color:#27313e;
-  .ivu-poptip-arrow:after {
-    left: 0!important;
-    border-right-color: #27313e !important;
-  }
-}
-/* 多选框 */
-.exchange .ivu-checkbox-checked .ivu-checkbox-inner {
-  background-color: #f0a70a;
-  border-color: #f0a70a;
-}
-/* modal */
-.ivu-modal-confirm-head {
-  text-align: center;
-  margin-bottom: 15px;
-}
-.ivu-modal-header p,
-.ivu-modal-header-inner {
-  color: #fff;
-}
-.ivu-modal-body {
-  border-radius: 5px;
-  .ivu-modal-confirm {
-    .ivu-modal-confirm-body {
-      font-size: 14px;
-    }
-  }
-}
-.ivu-modal-confirm-footer .ivu-btn-primary {
-  background-color: #f0a70a;
-  border-color: #f0a70a;
-}
-.ivu-modal-confirm-footer .ivu-btn-text {
-  &:hover {
-    color: #f0a70a;
-  }
-}
-.ivu-table-wrapper {
-  background-color: #192330;
-  .ivu-table {
-    box-shadow: 0px 0px 4px #27313e;
-    background-color: #192330;
-    color: #ccc;
-    &:before {
-      background: transparent;
-    }
-    &:after {
-      background: #192330;
-    }
-    .ivu-table-header {
-      th {
-        background-color: #27313e;
-        border: none;
-        color: #ccc;
-      }
-    }
-    .ivu-table-row:hover{
-      background: #1e2834;
-    }
-    .ivu-table-row td {
-      background-color: transparent;
-      border: none;
-      border-bottom: 1px solid #27313e;
-      color: #fff;
-    }
-  }
-}
-.ivu-table td {
-  background-color: #192330;
-  border-bottom: 1px solid #27313e;
-}
-.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
-  background: none;
-  &:after {
-    background: none;
-  }
-}
-.ivu-select-dropdown .ivu-select-item {
-  color: #ccc;
-  padding: 6px 16px;
-}
+// .ivu-table-filter i.on {
+//   color: #fff;
+// }
+// //tips
+// .ivu-message {
+//   color: #333;
+// }
+// .ivu-poptip-inner {
+//   background-color: #27313e;
+//   color: #fff;
+//   .ivu-poptip-body-content-inner {
+//     color: #fff;
+//   }
+// }
+// .ivu-poptip-popper {
+//   // border-top-color:#27313e;
+//   .ivu-poptip-arrow:after {
+//     left: 0!important;
+//     border-right-color: #27313e !important;
+//   }
+// }
+// /* 多选框 */
+// .exchange .ivu-checkbox-checked .ivu-checkbox-inner {
+//   background-color: #f0a70a;
+//   border-color: #f0a70a;
+// }
+// /* modal */
+// .ivu-modal-confirm-head {
+//   text-align: center;
+//   margin-bottom: 15px;
+// }
+// .ivu-modal-header p,
+// .ivu-modal-header-inner {
+//   color: #fff;
+// }
+// .ivu-modal-body {
+//   border-radius: 5px;
+//   .ivu-modal-confirm {
+//     .ivu-modal-confirm-body {
+//       font-size: 14px;
+//     }
+//   }
+// }
+// .ivu-modal-confirm-footer .ivu-btn-primary {
+//   background-color: #f0a70a;
+//   border-color: #f0a70a;
+// }
+// .ivu-modal-confirm-footer .ivu-btn-text {
+//   &:hover {
+//     color: #f0a70a;
+//   }
+// }
+// .ivu-table-wrapper {
+//   background-color: #192330;
+//   .ivu-table {
+//     box-shadow: 0px 0px 4px #27313e;
+//     background-color: #192330;
+//     color: #ccc;
+//     &:before {
+//       background: transparent;
+//     }
+//     &:after {
+//       background: #192330;
+//     }
+//     .ivu-table-header {
+//       th {
+//         background-color: #27313e;
+//         border: none;
+//         color: #ccc;
+//       }
+//     }
+//     .ivu-table-row:hover{
+//       background: #1e2834;
+//     }
+//     .ivu-table-row td {
+//       background-color: transparent;
+//       border: none;
+//       border-bottom: 1px solid #27313e;
+//       color: #fff;
+//     }
+//   }
+// }
+// .ivu-table td {
+//   background-color: #192330;
+//   border-bottom: 1px solid #27313e;
+// }
+// .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
+//   background: none;
+//   &:after {
+//     background: none;
+//   }
+// }
+// .ivu-select-dropdown .ivu-select-item {
+//   color: #ccc;
+//   padding: 6px 16px;
+// }
 
 .page-view {
   height: 100%;
   .page-content {
     .layout {
       .layout-ceiling {
-        background: #172636;
-        box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+        // background: #172636;
+        // box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
         .layout-ceiling-main {
           .header_nav {
             .ivu-menu-vertical.ivu-menu-light {
@@ -1454,13 +1454,13 @@ export default {
     }
   }
 }
-html,
-body {
-  height: 100%;
-  font-size: 14px;
-  background: #0b1520;
-  color: #fff;
-}
+// html,
+// body {
+//   height: 100%;
+//   font-size: 14px;
+//   background: #0b1520;
+//   color: #fff;
+// }
 
 /*自定义滚动条样式*/
 
@@ -1480,10 +1480,10 @@ body {
   border-radius: 14px;
 }
 
-.ivu-menu-dark,
-.ivu-menu-dark.ivu-menu-vertical .ivu-menu-opened {
-  background: #18202a;
-}
+// .ivu-menu-dark,
+// .ivu-menu-dark.ivu-menu-vertical .ivu-menu-opened {
+//   background: #18202a;
+// }
 
 #checkbox {
   width: 10px;
@@ -1543,7 +1543,8 @@ body {
 }
 
 .layout-ceiling-main a {
-  color: #fff;
+  // color: #fff;
+  color: inherit;
   display: inline-block;
   line-height: 40px;
   height: 40px;
@@ -1571,17 +1572,17 @@ body {
   width: 120px;
 }
 
-.layout-ceiling-main .ivu-select-dropdown {
-  background: #27313e;
-  margin-left: 25px;
-  .ivu-dropdown-item {
-    padding: 10px 16px;
-    color: #ccc;
-    &:hover {
-      color: #f0ac19;
-    }
-  }
-}
+// .layout-ceiling-main .ivu-select-dropdown {
+//   background: #27313e;
+//   margin-left: 25px;
+//   .ivu-dropdown-item {
+//     padding: 10px 16px;
+//     color: #ccc;
+//     &:hover {
+//       color: #f0ac19;
+//     }
+//   }
+// }
 
 .ivu-select-dropdown a {
   width: 100%;
@@ -1607,9 +1608,9 @@ body {
   vertical-align: middle;
 }
 
-.ivu-radio-inner:after {
-  background: #18202a;
-}
+// .ivu-radio-inner:after {
+//   background: #18202a;
+// }
 
 /*安全中心*/
 
@@ -1624,15 +1625,15 @@ body {
 .ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item {
   padding-left: 0 !important;
   padding-right: 0;
-  color: rgba(130,142,161,1);
+  // color: rgba(130,142,161,1);
   font-size: 14px;
   border-right: 0 !important;
 }
 
-.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item-active,
-.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item-active:hover {
-  background: #1855fd !important;
-}
+// .ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item-active,
+// .ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item-active:hover {
+//   background: #1855fd !important;
+// }
 
 .rr .ivu-menu-vertical.ivu-menu-light:after {
   width: 0;
@@ -1900,44 +1901,44 @@ body {
   }
 }
 /*input框样式重置*/
-.ivu-input,
-.ivu-input-number-input,
-.ivu-input-number {
-  background-color: #192330;
-  color: #fff;
-  border-color: #27313e;
-  &:hover {
-    border-color: #27313e;
-  }
-  &:focus {
-    border-color: #27313e;
-    box-shadow: none;
-  }
-}
-.ivu-input[disabled]:hover,
-fieldset[disabled] .ivu-input:hover {
-  border-color: #27313e;
-}
-.ivu-input[disabled],
-fieldset[disabled] .ivu-input {
-  background-color: #27313e;
-}
-.ivu-input-number-focused {
-  box-shadow: none;
-}
-.ivu-input-number:focus {
-  box-shadow: none;
-}
-.ivu-form .ivu-form-item-label {
-  color: #ccc;
-}
-.ivu-input-number-handler-wrap {
-  background: #27313e;
-  border-left: 1px solid #192330;
-}
-.ivu-input-number-handler {
-  border-top: 1px solid #192330;
-}
+// .ivu-input,
+// .ivu-input-number-input,
+// .ivu-input-number {
+//   background-color: #192330;
+//   color: #fff;
+//   border-color: #27313e;
+//   &:hover {
+//     border-color: #27313e;
+//   }
+//   &:focus {
+//     border-color: #27313e;
+//     box-shadow: none;
+//   }
+// }
+// .ivu-input[disabled]:hover,
+// fieldset[disabled] .ivu-input:hover {
+//   border-color: #27313e;
+// }
+// .ivu-input[disabled],
+// fieldset[disabled] .ivu-input {
+//   background-color: #27313e;
+// }
+// .ivu-input-number-focused {
+//   box-shadow: none;
+// }
+// .ivu-input-number:focus {
+//   box-shadow: none;
+// }
+// .ivu-form .ivu-form-item-label {
+//   color: #ccc;
+// }
+// .ivu-input-number-handler-wrap {
+//   background: #27313e;
+//   border-left: 1px solid #192330;
+// }
+// .ivu-input-number-handler {
+//   border-top: 1px solid #192330;
+// }
 .ivu-input-number-handler:hover .ivu-input-number-handler-up-inner,
 .ivu-input-number-handler:hover .ivu-input-number-handler-down-inner {
   color: #ccc;
@@ -1947,300 +1948,300 @@ fieldset[disabled] .ivu-input {
   color: #ccc;
 }
 /*下拉框样式重置*/
-.ivu-select-selection {
-  background-color: #192330;
-  color: #fff;
-  border: 1px solid #27313e;
-}
-.ivu-select-selection:hover {
-  border-color: #27313e;
-}
-.ivu-select-visible .ivu-select-selection {
-  border-color: #27313e;
-  box-shadow: none;
-}
-.ivu-select-selected-value {
-  color: #fff;
-}
-.ivu-select-selection-focused {
-  border-color: #27313e;
-}
-.ivu-select-dropdown {
-  background-color: #192330;
-}
+// .ivu-select-selection {
+//   background-color: #192330;
+//   color: #fff;
+//   border: 1px solid #27313e;
+// }
+// .ivu-select-selection:hover {
+//   border-color: #27313e;
+// }
+// .ivu-select-visible .ivu-select-selection {
+//   border-color: #27313e;
+//   box-shadow: none;
+// // }
+// .ivu-select-selected-value {
+//   color: #fff;
+// }
+// .ivu-select-selection-focused {
+//   border-color: #27313e;
+// }
+// .ivu-select-dropdown {
+//   background-color: #192330;
+// }
 
-.ivu-select-disabled .ivu-select-selection {
-  background-color: #27313e;
-}
-.ivu-select-disabled .ivu-select-selection:hover {
-  border-color: #27313e;
-}
-/*下拉框*/
-.ivu-select-item-selected {
-  background-color: #192330;
-  color: #ccc;
-}
-.ivu-select-item-focus {
-  background-color: #192330;
-}
-.ivu-select-item:hover {
-  background-color: #27313e;
-  // color:#ccc;
-  color: #f0ac19;
-}
-.ivu-select-multiple .ivu-select-item-selected {
-  background-color: #192330;
-  color: #f0ac19;
-}
-.ivu-select-multiple .ivu-select-item-focus,
-.ivu-select-multiple .ivu-select-item-selected:hover {
-  background-color: #192330;
-}
-.ivu-select-multiple .ivu-select-item-selected:after {
-  color: #f0ac19;
-}
+// .ivu-select-disabled .ivu-select-selection {
+//   background-color: #27313e;
+// }
+// .ivu-select-disabled .ivu-select-selection:hover {
+//   border-color: #27313e;
+// }
+// /*下拉框*/
+// .ivu-select-item-selected {
+//   background-color: #192330;
+//   color: #ccc;
+// }
+// .ivu-select-item-focus {
+//   background-color: #192330;
+// }
+// .ivu-select-item:hover {
+//   background-color: #27313e;
+//   // color:#ccc;
+//   color: #f0ac19;
+// }
+// .ivu-select-multiple .ivu-select-item-selected {
+//   background-color: #192330;
+//   color: #f0ac19;
+// }
+// .ivu-select-multiple .ivu-select-item-focus,
+// .ivu-select-multiple .ivu-select-item-selected:hover {
+//   background-color: #192330;
+// }
+// .ivu-select-multiple .ivu-select-item-selected:after {
+//   color: #f0ac19;
+// }
 
-.ivu-select-item-selected,
-.ivu-select-item-selected:hover {
-  background-color: #192330;
-  color: #f0ac19;
-}
-// chexkboxes
-.ivu-checkbox-inner {
-  background-color: #192330;
-}
+// .ivu-select-item-selected,
+// .ivu-select-item-selected:hover {
+//   background-color: #192330;
+//   color: #f0ac19;
+// }
+// // chexkboxes
+// .ivu-checkbox-inner {
+//   background-color: #192330;
+// }
 
-// 开关
-.ivu-switch {
-  border: 1px solid #27313e;
-  background-color: #192330;
-}
-.ivu-switch:after {
-  background-color: #ccc;
-}
-// tag
-.ivu-tag {
-  border: 1px solid #27313e;
-  border-radius: 3px;
-  background: #192330;
-}
-.ivu-tag-text {
-  color: #ccc;
-}
-/*table组件样式重置*/
-.ivu-table-wrapper {
-  border: none;
-}
-.ivu-table-wrapper > .ivu-spin-fix {
-  background-color: rgba(0, 0, 0, 0.2);
-  border: none;
-  border-color: #fff;
-}
-.ivu-spin-fix {
-  background-color: rgba(0, 0, 0, 0.2);
-  border: none;
-  border-color: #fff;
-}
-/*加载样式重置*/
-.ivu-spin-dot {
-  background: #f0ac19;
-}
-.ivu-tabs-bar {
-  border-color: #f5f5f5;
-}
-/*日期组件样式重置*/
-.ivu-picker-panel-icon-btn {
-  &:hover {
-    color: #f0ac19;
-  }
-}
-.ivu-date-picker-focused input {
-  border-color: #1f2936;
-  box-shadow: none;
-}
-.ivu-date-picker-cells-focused em {
-  // -moz-box-shadow: 0 0 0 1px #f0ac19 inset;
-  // -webkit-box-shadow: 0 0 0 1px #f0ac19 inset;
-  // box-shadow: 0 0 0 1px #f0ac19 inset;
-  box-shadow: none;
-  color: #f0ac19;
-  // &::after {
-  //   // background: #27313e;
-  // }
-}
-.ivu-date-picker-cells-cell {
-  color: #fff;
-}
-.ivu-date-picker-cells-cell-selected em,
-.ivu-date-picker-cells-cell-selected:hover em {
-  background: #27313e;
-  color: #f0ac19;
-}
-.ivu-date-picker-cells-cell-today em:after {
-  background: #27313e;
-}
-.ivu-date-picker-cells-cell-range:before {
-  background: rgba(240, 167, 10, 0.2);
-}
-.ivu-date-picker-cells-cell:hover em {
-  background: #27313e;
-  color: #f0ac19;
-}
-/*按钮样式重置*/
+// // 开关
+// .ivu-switch {
+//   border: 1px solid #27313e;
+//   background-color: #192330;
+// }
+// .ivu-switch:after {
+//   background-color: #ccc;
+// }
+// // tag
+// .ivu-tag {
+//   border: 1px solid #27313e;
+//   border-radius: 3px;
+//   background: #192330;
+// }
+// .ivu-tag-text {
+//   color: #ccc;
+// }
+// /*table组件样式重置*/
+// .ivu-table-wrapper {
+//   border: none;
+// }
+// .ivu-table-wrapper > .ivu-spin-fix {
+//   background-color: rgba(0, 0, 0, 0.2);
+//   border: none;
+//   border-color: #fff;
+// }
+// .ivu-spin-fix {
+//   background-color: rgba(0, 0, 0, 0.2);
+//   border: none;
+//   border-color: #fff;
+// }
+// /*加载样式重置*/
+// .ivu-spin-dot {
+//   background: #f0ac19;
+// }
+// .ivu-tabs-bar {
+//   border-color: #f5f5f5;
+// }
+// /*日期组件样式重置*/
+// .ivu-picker-panel-icon-btn {
+//   &:hover {
+//     color: #f0ac19;
+//   }
+// }
+// .ivu-date-picker-focused input {
+//   border-color: #1f2936;
+//   box-shadow: none;
+// }
+// .ivu-date-picker-cells-focused em {
+//   // -moz-box-shadow: 0 0 0 1px #f0ac19 inset;
+//   // -webkit-box-shadow: 0 0 0 1px #f0ac19 inset;
+//   // box-shadow: 0 0 0 1px #f0ac19 inset;
+//   box-shadow: none;
+//   color: #f0ac19;
+//   // &::after {
+//   //   // background: #27313e;
+//   // }
+// }
+// .ivu-date-picker-cells-cell {
+//   color: #fff;
+// }
+// .ivu-date-picker-cells-cell-selected em,
+// .ivu-date-picker-cells-cell-selected:hover em {
+//   background: #27313e;
+//   color: #f0ac19;
+// }
+// .ivu-date-picker-cells-cell-today em:after {
+//   background: #27313e;
+// }
+// .ivu-date-picker-cells-cell-range:before {
+//   background: rgba(240, 167, 10, 0.2);
+// }
+// .ivu-date-picker-cells-cell:hover em {
+//   background: #27313e;
+//   color: #f0ac19;
+// }
+// /*按钮样式重置*/
 
-.ivu-btn {
-  border: none;
-}
-.ivu-btn-primary:hover {
-  background: #f0ac19;
-  border-color: #f0ac19;
-}
-.ivu-btn.ivu-btn-default {
-  background-color: #27313e;
-  color: #FFF;
-  &:hover {
-    color: #f0a70a;
-    // background: #27313e;
-    // border: 1px solid #f0a70a;
-  }
-  &:active {
-    color: #f0a70a;
-    // border: 1px solid #f0a70a;
-    // background: #27313e;
-  }
-}
-// primary按钮
-.ivu-btn-text {
-  color: #ccc;
-  border: 1px solid #27313e;
-}
-.ivu-btn-primary {
-  background-color: #f0ac19;
-  border-color: #f0ac19;
-}
-.ivu-btn-text:hover {
-  background-color: transparent;
-  color: #f0ac19;
-}
-.ivu-input-group-append,
-.ivu-input-group-prepend {
-  background-color: #27313e;
-  border: 1px solid #27313e;
-}
-.ivu-form-item-error .ivu-input-group-append,
-.ivu-form-item-error .ivu-input-group-prepend {
-  background-color: #27313e;
-  border: 1px solid #27313e;
-}
-.ivu-form-item-error .ivu-input,
-.ivu-form-item-error .ivu-input:focus,
-.ivu-form-item-error .ivu-input:hover {
-  border: 1px solid #27313e;
-  box-shadow: none;
-}
+// .ivu-btn {
+//   border: none;
+// }
+// .ivu-btn-primary:hover {
+//   background: #f0ac19;
+//   border-color: #f0ac19;
+// }
+// .ivu-btn.ivu-btn-default {
+//   background-color: #27313e;
+//   color: #FFF;
+//   &:hover {
+//     color: #f0a70a;
+//     // background: #27313e;
+//     // border: 1px solid #f0a70a;
+//   }
+//   &:active {
+//     color: #f0a70a;
+//     // border: 1px solid #f0a70a;
+//     // background: #27313e;
+//   }
+// }
+// // primary按钮
+// .ivu-btn-text {
+//   color: #ccc;
+//   border: 1px solid #27313e;
+// }
+// .ivu-btn-primary {
+//   background-color: #f0ac19;
+//   border-color: #f0ac19;
+// }
+// .ivu-btn-text:hover {
+//   background-color: transparent;
+//   color: #f0ac19;
+// }
+// .ivu-input-group-append,
+// .ivu-input-group-prepend {
+//   background-color: #27313e;
+//   border: 1px solid #27313e;
+// }
+// .ivu-form-item-error .ivu-input-group-append,
+// .ivu-form-item-error .ivu-input-group-prepend {
+//   background-color: #27313e;
+//   border: 1px solid #27313e;
+// }
+// .ivu-form-item-error .ivu-input,
+// .ivu-form-item-error .ivu-input:focus,
+// .ivu-form-item-error .ivu-input:hover {
+//   border: 1px solid #27313e;
+//   box-shadow: none;
+// }
 
-/*radio样式重置*/
-.ivu-radio-checked .ivu-radio-inner {
-  border-color: #f0ac19;
-}
-.ivu-radio-checked:hover {
-  .ivu-radio-inner {
-    border-color: #f0ac19;
-  }
-}
-.ivu-radio-inner:after {
-  background: #f0ac19;
-}
-.ivu-switch-checked {
-  border-color: #f0ac19;
-  background-color: #f0ac19;
-}
-.ivu-switch:focus {
-  box-shadow: none;
-}
-.ivu-radio-focus {
-  box-shadow: none;
-}
+// /*radio样式重置*/
+// .ivu-radio-checked .ivu-radio-inner {
+//   border-color: #f0ac19;
+// }
+// .ivu-radio-checked:hover {
+//   .ivu-radio-inner {
+//     border-color: #f0ac19;
+//   }
+// }
+// .ivu-radio-inner:after {
+//   background: #f0ac19;
+// }
+// .ivu-switch-checked {
+//   border-color: #f0ac19;
+//   background-color: #f0ac19;
+// }
+// .ivu-switch:focus {
+//   box-shadow: none;
+// }
+// .ivu-radio-focus {
+//   box-shadow: none;
+// }
 
-//弹窗
-.ivu-modal-content {
-  background-color: #192330;
-}
-.ivu-modal-header {
-  border-bottom: 1px solid #27313e;
-}
-.ivu-modal-confirm-head-icon-confirm {
-  color: #fff;
-}
-.ivu-modal-header p {
-  color: #fff;
-}
-.ivu-modal-footer {
-  border-top: 1px solid #27313e;
-}
-/*排序小箭头样式重置*/
-.ivu-table-sort i.on {
-  color: #f0ac19;
-}
-.ivu-table-sort i:hover {
-  color: #f0ac19;
-}
-.ivu-modal-confirm-head-icon {
-  font-size: 24px;
-}
-.ivu-modal-confirm-body {
-  color: #fff;
-  padding-left: 0;
-}
-.ivu-modal-confirm-head-title {
-  color: #fff;
-  margin-left: 5px;
-}
-.ivu-modal-confirm-footer {
-  padding-top: 10px;
-  border-top: 1px solid #27313e;
-}
-// 上传组件
-.ivu-upload-list-file:hover {
-  background-color: #27313e;
-}
+// //弹窗
+// .ivu-modal-content {
+//   background-color: #192330;
+// }
+// .ivu-modal-header {
+//   border-bottom: 1px solid #27313e;
+// }
+// .ivu-modal-confirm-head-icon-confirm {
+//   color: #fff;
+// }
+// .ivu-modal-header p {
+//   color: #fff;
+// }
+// .ivu-modal-footer {
+//   border-top: 1px solid #27313e;
+// }
+// /*排序小箭头样式重置*/
+// .ivu-table-sort i.on {
+//   color: #f0ac19;
+// }
+// .ivu-table-sort i:hover {
+//   color: #f0ac19;
+// }
+// .ivu-modal-confirm-head-icon {
+//   font-size: 24px;
+// }
+// .ivu-modal-confirm-body {
+//   color: #fff;
+//   padding-left: 0;
+// }
+// .ivu-modal-confirm-head-title {
+//   color: #fff;
+//   margin-left: 5px;
+// }
+// .ivu-modal-confirm-footer {
+//   padding-top: 10px;
+//   border-top: 1px solid #27313e;
+// }
+// // 上传组件
+// .ivu-upload-list-file:hover {
+//   background-color: #27313e;
+// }
 
-.ivu-menu-light.ivu-menu-horizontal .ivu-menu-item-active, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item:hover, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu-active, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu:hover{
-  border-bottom:0!important;
-  color: #828ea1!important;
-}
-.ivu-menu-horizontal .ivu-menu-submenu .ivu-select-dropdown .ivu-menu-item:hover{
-  background: #2f3e51!important;
-}
-.ivu-menu-horizontal.ivu-menu-light{
-  background:transparent!important;
-}
-.ivu-menu-horizontal.ivu-menu-light:after{
-  height: 0!important;
-}
-.ivu-select-dropdown{
-  border-radius: 0!important;
-}
-.lang-img{
-    height: 20px;
-    margin-bottom: -5px;
-    margin-right: 5px;
-}
-.lang-item{
-  text-align:left;
-  img{
-    height: 20px;
-    margin-bottom: -5px;
-    margin-right: 5px;
-  }
-  &:hover{
-    background:#2f3e51;
-  }
-}
-.ivu-message-notice-content{
-  background: #324368;
-  color: #a3bbcc;
-}
+// .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item-active, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item:hover, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu-active, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu:hover{
+//   border-bottom:0!important;
+//   color: #828ea1!important;
+// }
+// .ivu-menu-horizontal .ivu-menu-submenu .ivu-select-dropdown .ivu-menu-item:hover{
+//   background: #2f3e51!important;
+// }
+// .ivu-menu-horizontal.ivu-menu-light{
+//   background:transparent!important;
+// }
+// .ivu-menu-horizontal.ivu-menu-light:after{
+//   height: 0!important;
+// }
+// .ivu-select-dropdown{
+//   border-radius: 0!important;
+// }
+// .lang-img{
+//     height: 20px;
+//     margin-bottom: -5px;
+//     margin-right: 5px;
+// }
+// .lang-item{
+//   text-align:left;
+//   img{
+//     height: 20px;
+//     margin-bottom: -5px;
+//     margin-right: 5px;
+//   }
+//   &:hover{
+//     background:#2f3e51;
+//   }
+// }
+// .ivu-message-notice-content{
+//   background: #324368;
+//   color: #a3bbcc;
+// }
 
 .social-list{
   ul{
@@ -2283,26 +2284,26 @@ fieldset[disabled] .ivu-input {
   transition: all 0.5s;
 }
 .swiper-pagination-bullet-active{
-  background: #f0a70a!important;
+  // background: #f0a70a!important;
   width:30px;
   opacity: 1;
 }
-.login_right .ivu-select-dropdown{
-  background: #212b36;
-}
+// .login_right .ivu-select-dropdown{
+//   background: #212b36;
+// }
 .login_right .ivu-select-dropdown .ivu-select-item{
   text-align: left;
 }
-.ivu-form-item-error .ivu-input-group-append, .ivu-form-item-error .ivu-input-group-prepend,.ivu-input-group-append, .ivu-input-group-prepend{
-  background-color: #17212e;
-  border-bottom: 1px solid #27313e;
-  border-top:none;
-  border-left: none;
-  border-right: none;
-}
-.ivu-select-single .ivu-select-selection{
-  background-color: #17212e;
-}
+// .ivu-form-item-error .ivu-input-group-append, .ivu-form-item-error .ivu-input-group-prepend,.ivu-input-group-append, .ivu-input-group-prepend{
+//   background-color: #17212e;
+//   border-bottom: 1px solid #27313e;
+//   border-top:none;
+//   border-left: none;
+//   border-right: none;
+// }
+// .ivu-select-single .ivu-select-selection{
+//   background-color: #17212e;
+// }
 .login_form{
   /* WebKit browsers */
   input::-webkit-input-placeholder {
@@ -2405,7 +2406,7 @@ fieldset[disabled] .ivu-input {
 }
 .header_nav_mobile .ivu-menu-vertical .ivu-menu-item, .header_nav_mobile .ivu-menu-vertical .ivu-menu-submenu-title{
   padding: 8px 24px 8px 5px;
-  color: #828ea1;
+  // color: #828ea1;
 }
 .header_nav_mobile .ivu-drawer-wrap .ivu-drawer-no-header .ivu-drawer-content .ivu-drawer-body{
   background: #2b323a;
@@ -2414,7 +2415,7 @@ fieldset[disabled] .ivu-input {
 .header_nav_mobile .ivu-menu-vertical.ivu-menu-light:after{
   background:transparent!important;
 }
-.header_nav_mobile .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu){
-  color: #f0a70a;
-}
+// .header_nav_mobile .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu){
+//   color: #f0a70a;
+// }
 </style>

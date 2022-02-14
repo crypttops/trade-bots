@@ -22,8 +22,9 @@ import bitsgapInstance from './config/axios.js';
 
 
 import ViewUI from 'view-design';
+import 'view-design/dist/styles/iview.css';
 import locale from 'view-design/dist/locale/en-US';
-import "@/assets/custom-theme/index.less";
+import "./assets/custom-theme/index.less";
 
 Vue.use(iView);
 Vue.use(VueClipboard);
@@ -65,7 +66,7 @@ router.afterEach((to,from,next) => {
 });
 
 const i18n = new VueI18n({
-    locale: 'zh_CN',
+    locale: 'en',
     messages: {
         'zh_CN': require('./assets/lang/cn.js'),
         'en_US': require('./assets/lang/en.js'),
