@@ -8,7 +8,8 @@ export default new Vuex.Store({
         lang: '',
         exchangeSkin:'night',
         loginTimes: null,
-        exchanges: null
+        exchanges: null,
+        workingExchange: null,
     },
     mutations: {
         navigate(state, nav) {
@@ -50,7 +51,11 @@ export default new Vuex.Store({
         setExchanges(state, exchanges){
             state.exchanges = exchanges
             localStorage.setItem('EXCHANGES', JSON.stringify(exchanges))
-        }
+        },
+        setWorkingExchanges(state, exchange){
+            state.workingExchange = exchange
+            localStorage.setItem('WORKINGEXCHANGE', JSON.stringify(exchange))
+        },
     },
     getters: {
         member(state) {
@@ -67,6 +72,9 @@ export default new Vuex.Store({
         },
         exchanges(state){
             return state.exchanges
+        },
+        workingExchange(state){
+            return state.workingExchange
         }
     }
 });

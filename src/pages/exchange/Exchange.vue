@@ -3,6 +3,11 @@
   
     <div class="main">
       <div class="right">
+          <div style="padding: 8px 10px;height:48px;">
+            <Select v-model="workingExchange" placeholder="Select Exchange">
+              <Option placeholder="Select Exchange" v-for="item in ExchangeList" :value="item" :key="item.exchange_id">{{ item.exchange_name }}</Option>
+            </Select>
+          </div>  
         <div class="coin-menu">
           <div style="padding: 8px 10px;height:48px;">
             <Input search :placeholder="$t('common.searchplaceholder')" @on-change="seachInputChange" v-model="searchKey"/>
@@ -676,12 +681,17 @@ var moment = require("moment-timezone");
 import DepthGraph from "@components/exchange/DepthGraph.vue";
 import $ from "@js/jquery.min.js";
 import BZCountDown from "@components/exchange/BZCountDown.vue";
+import bitsgapInstance from "@/config/axios.js";
+import bitsgap from "@/config/bitsgap.js";
 
 export default {
   components: { expandRow, DepthGraph, BZCountDown},
   data() {
     let self = this;
     return {
+      userId: this.$store.getters.member.id,
+      ExchangeList: [],
+      workingExchange:{},
       sliderStep: [25, 50, 75, 100],
       sliderBuyLimitPercent: 0,
       sliderSellLimitPercent: 0,
@@ -1584,6 +1594,32 @@ export default {
     this.init();
   },
   methods: {
+    getAllMyExchanges(){
+      var params = {}
+      params["user_id"] = this.$store.state.member.id
+      
+      bitsgapInstance.get('/exchanges/list?userId=' + this.userId)
+      .then(response => {
+          this.ExchangeList = response.data.result;
+          
+          let exchangeDetails = []
+          if (this.ExchangeList != []){
+              for (var i = 0, len = this.ExchangeList.length; i < len; i++) {
+                  let exchange = {}
+                  exchange["exchange_id"] = this.ExchangeList[i].exchange_id;
+                  exchange["exchange_name"] = this.ExchangeList[i].exchange_name;
+                  exchange["exchange_type"] = this.ExchangeList[i].exchange_type;
+                  exchangeDetails.push(exchange)
+              }
+          }
+          this.$store.commit("setExchanges", exchangeDetails)
+      })
+      .catch(error => {
+          console.log(error)
+          this.ExchangeList = [];
+          this.$store.commit("setExchanges", [])
+      })
+    },
     seachInputChange(){
       this.searchKey = this.searchKey.toUpperCase();
       if(this.basecion == "favor"){
@@ -1624,6 +1660,8 @@ export default {
       this.getPlateFull();
       this.getTrade();
       if (this.isLogin) {
+        this.userId = this.$store.state.member.id;
+        this.getAllMyExchanges();
         this.getWallet(); //账户资产信息
         this.getCurrentOrder(); //当前委托
         this.getHistoryOrder(); //历史委托
