@@ -272,8 +272,10 @@ selectBotModal = false;
             </Select>
           </div>
           <div>
-            <label for>Time Frame</label>
-            <Input v-model="dcaConfigs.timeframe" />
+            <label for="">Time Frame</label>
+            <Select v-model="dcaConfigs.timeframe">
+              <Option v-for="timeframe in timeframes" :value="timeframe" :key="timeframe">{{ timeframe }}</Option>
+            </Select>
           </div>
           <div>
             <label for>Interval Between Orders</label>
@@ -411,6 +413,7 @@ export default {
         order_timeout: 0,
         max_active_trade_count: 0,
       },
+      timeframes: ['5m', '30m', '1h', '4h', '1d'],
       exchangesBalances: {},
       availablePairs: ["BTCUSDT", "ETHUSDT", "DOGEUSDT", "LTCUSDT"],
       exchangeList: [],
